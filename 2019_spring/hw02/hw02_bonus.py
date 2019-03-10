@@ -32,8 +32,8 @@ for cost in range(cost1, cost2+1):
             '''
             everytime when there's a better solution, renew value.
             Also, when we fisrt time run the loop, price == cost, so that profits == max_profitbut == 0, 
-            but we should still renew the variable or we may get, 
-            or if any price will get 0 profits, we'll get 0, 0, 0, which is wrong
+            but we should still renew the variable, 
+            or if every price gets 0 profits, we'll get 0, 0, 0, which is a wrong answer.
             '''
             max_profit = profits
             best_price = price

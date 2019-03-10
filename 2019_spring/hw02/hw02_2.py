@@ -1,7 +1,7 @@
 cost = int(input())
 a1 = int(input())
-r1 = int(input())
-r2 = int(input())
+r1 = int(input()) #the first interval of price
+r2 = int(input()) #the second interval of price
 
 a2 = a1 + r1
 a3 = a2 - r2 
@@ -29,17 +29,20 @@ while (1):
         '''
         everytime when there's a better solution, renew value.
         Also, when we fisrt time run the loop, price == cost, so that profits == max_profitbut == 0, 
-        but we should still renew the variable or we may get, 
-        or if any price will get 0 profits, we'll get 0, 0, 0, which is wrong
+        but we should still renew the variable, 
+        or if every price gets 0 profits, we'll get 0, 0, 0, which is a wrong answer.
         '''
         max_profit = profits
         best_price = price
         best_q = require
 
-    if (require == 0) and (price != cost):
+    if (require == 0) and (price != cost): 
+        """
+        when require equal to 0, and price != cost, there's only one possible : require is start to be negative
+        """
         break  
     
-    price += 1
+    price += 1 #everytime we end up the loop we update the price by plusing 1
     
 
 print(best_price, best_q, max_profit)
