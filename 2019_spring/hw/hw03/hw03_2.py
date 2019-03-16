@@ -1,29 +1,27 @@
-row_1 = input() #the row 1 of input
-row_2 = input() #the row 2 of input
-row_3 = input() #the row 3 of input
+guest_and_massage_master = input() #the row 1 of input
+time = input() #the row 2 of input
+profit = input() #the row 3 of input
 
-row_1 = row_1.split(",") #make row_1 a list by seperating the variables by ","
-
-guest_and_massage_master = [] #a temp list to write in guest and massage master
-for item in row_1: #use for loop to int() things contain in list row_1, and append it toanother list
-    guest_and_massage_master.append(int(item))
+guest_and_massage_master = guest_and_massage_master.split(",") #make row_1 a list by seperating the variables by ","
+for item in range(len(guest_and_massage_master)): #use for loop to int() things contain in guest_and_massage_master
+    guest_and_massage_master[item] = int(guest_and_massage_master[item])
 
 guest = guest_and_massage_master[0] #guest's number
 massage_master = guest_and_massage_master[1] #master's number
 
 ''''''
 
-row_2 = row_2.split(",") #make row_2 a list by seperating the variables by ","
-time = [] 
-for item in row_2: #use as the abovementioned usage in row 7
-    time.append(int(item))
+time = time.split(",") #make row_2 a list by seperating the variables by ","
+for item in range(len(time)): #use as the abovementioned usage in row 6
+    time[item] = int(time[item])
 
 ''''''
 
-row_3 = row_3.split(",") #make row_3 a list by seperating the variables by ","
-profit = [] #profit we'll get when we finish certain guest, which we use list to record
-for item in row_3: #use as the abovementioned usage in row 7
-    profit.append(int(item))
+profit = profit.split(",") #make row_3 a list by seperating the variables by ","
+for item in range(len(profit)): #use as the abovementioned usage in row 6
+    profit[item] = int(profit[item])
+
+''''''
 
 worktime_of_master = [0] * massage_master #a list to record the total time massage masters work
 total_profit = 0 #to sum up the profit

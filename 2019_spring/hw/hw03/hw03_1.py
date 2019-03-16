@@ -36,7 +36,6 @@ for bonus in list_of_row_2:
             if capital<=0 :
                 break
         
-        
     if capital <= 0: #shut down beforearrive the goal week 
         print(str(week-1)+','+str(capital))
         exit()
@@ -45,8 +44,3 @@ for bonus in list_of_row_2:
         exit()
 
     week += 1 #after one whole week week+1
-
-    
-    
-    
-
