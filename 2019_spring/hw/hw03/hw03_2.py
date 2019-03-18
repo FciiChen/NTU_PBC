@@ -31,6 +31,7 @@ num_had_service = 0 #the total amount of guest we've serviced
 for num in range(0, guest): #go through every guest by their number
     min_time = 360 #the limit of the worktime of massage master 
     best_master_choice = 0 #to record the best master under the condition we want
+    
     master_counter = 0 #to count the master's number which we are now checking
     for worktime in worktime_of_master: #go through master's worktime
         if (worktime < min_time) and (worktime + time[num] <= 360): #if fit the condition, it means it may be a good candidate
