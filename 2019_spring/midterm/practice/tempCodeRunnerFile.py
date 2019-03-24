@@ -7,15 +7,16 @@ cost = row_1[3]
 
 row_2 = input().split(",")
 row_2 = [int(i) for i in row_2]
+row_2.sort()
 
 best_buy_in_price = 0
-best_profit = -1 #notice the boundary value
-row_2.sort()
+best_profit = 0
+
 
 for buy_in_price in row_2:
     test_best_price = 0
-    test_best_profit = -1
-    for price in range(buy_in_price, (a_constant//b_constant)+1):
+    test_best_profit = 0
+    for price in range(buy_in_price+1, a_constant//b_constant+1):
         test_profit = (price - buy_in_price) * (a_constant - b_constant*price)
         if test_profit > test_best_profit:
             test_best_profit = test_profit
