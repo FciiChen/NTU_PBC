@@ -21,7 +21,7 @@ for i in range(num_of_path_to_calculate):
 #print(path_to_calculate)
 
 ans_string = str()
-for path in path_to_calculate:
+for path in path_to_calculate: #the path
     path_length = 0
     #print(path)
     for i in range(len(path)-1):
