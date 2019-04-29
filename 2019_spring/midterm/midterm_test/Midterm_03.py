@@ -6,6 +6,8 @@ for i in range(num):
     temp_array = [int(i) for i in temp_array]
     array.append(temp_array) #i_row = 橫行(frst label) j_row = 直列(second label)
 
+#print(array)
+
 yes_pairs = []
 
 for i in range(num):
@@ -13,7 +15,7 @@ for i in range(num):
         if array[i][j] == array[j][i] and i < j:
             yes_pairs.append([i,j])
 
-#print(yes_pairs)
+print(yes_pairs)
 #print(len(yes_pairs))
 
 for i in range(len(yes_pairs)):
